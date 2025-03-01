@@ -1,9 +1,12 @@
+import * as React from "react";
 import { AnimatedSubscribeButton } from "./magicui/animated-subscribe-button";
 import { ClipboardCheck, Copy } from "lucide-react";
 
-export function AnimatedCopyEmailAddressButton() {
+export function AnimatedCopyEmailAddressButton({
+  onClick,
+}: React.ComponentProps<"button">) {
   return (
-    <AnimatedSubscribeButton className="min-w-36">
+    <AnimatedSubscribeButton onClick={onClick} className="min-w-36">
       <span className="group inline-flex items-center">
         Copy my email address
         <Copy className="ml-2 size-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -15,4 +18,3 @@ export function AnimatedCopyEmailAddressButton() {
     </AnimatedSubscribeButton>
   );
 }
-

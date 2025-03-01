@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <NavigationDock />
-      <main className="flex flex-col min-h-[100dvh] space-y-10 py-15">
+      <main className="flex flex-col min-h-[100dvh] space-y-8 py-10">
         <HomeSection />
       </main>
     </>
