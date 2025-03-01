@@ -1,7 +1,5 @@
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { DATA } from "@/data/resume";
-import { remark } from "remark";
-import html from "remark-html";
 import Grid from "../Grid";
 import Link from "next/link";
 import { ResumeCard } from "../ResumeCard";

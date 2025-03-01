@@ -1,4 +1,4 @@
-import { getBlogPosts, getPost } from "@/utils/blog";
+import { getBlogPosts, getPost } from "@/data/blog";
 import { DATA } from "@/data/resume";
 import { formatDate } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -17,15 +17,22 @@ export async function generateMetadata({
     slug: string;
   };
 }): Promise<Metadata | undefined> {
-  let post = await getPost(params.slug);
+  const { slug } = params;
+  const post = await getPost(slug); 
 
-  let {
+  if (!post) {
+    return undefined; 
+  }
+
+  const {
     title,
     publishedAt: publishedTime,
     summary: description,
     image,
   } = post.metadata;
-  let ogImage = image ? `${DATA.url}${image}` : `${DATA.url}/og?title=${title}`;
+  const ogImage = image
+    ? `${DATA.url}${image}`
+    : `${DATA.url}/og?title=${title}`;
 
   return {
     title,
@@ -58,10 +65,11 @@ export default async function Blog({
     slug: string;
   };
 }) {
-  let post = await getPost(params.slug);
+  const { slug } = params; 
+  const post = await getPost(slug); 
 
   if (!post) {
-    notFound();
+    notFound(); 
   }
 
   return (

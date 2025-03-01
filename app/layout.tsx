@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { DotPattern } from "@/components/magicui/dot-pattern";
 import { cn } from "@/lib/utils";
+import { PageTransitionLoader } from "@/components/PageTransitionLoader";
+import RouteChangeHandler from "@/components/RouteChangeHandler";
+import { GlobalProvider } from "@/components/Provider/GlobalProvider";
 
 const inter = Inter({
   variable: "--font-geist-sans",
@@ -24,16 +25,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "${inter.variable} min-h-screen bg-background font-sans select-none antialiased max-w-4xl mx-auto py-12 sm:py-24 px-6"
+          `${inter.variable} min-h-screen bg-background font-sans select-none antialiased max-w-5xl mx-auto py-12 sm:py-24 px-6`
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          disableTransitionOnChange
-        >
+        <GlobalProvider>
+          {/* <RouteChangeHandler /> */}
           {children}
-        </ThemeProvider>
+          {/* <PageTransitionLoader /> */}
+        </GlobalProvider>
       </body>
     </html>
   );

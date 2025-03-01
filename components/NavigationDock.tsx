@@ -20,7 +20,6 @@ import { ModeToggle } from "./mode-toggle";
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const Icons = {
-  calendar: (props: IconProps) => <CalendarIcon {...props} />,
   email: (props: IconProps) => <MailIcon {...props} />,
   linkedin: (props: IconProps) => (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -63,31 +62,38 @@ const Icons = {
   ),
 };
 
+const handleEmailClick = () => {
+  const emailLink = document.createElement("a");
+  emailLink.href =
+    "mailto:your.email@example.com";
+  emailLink.click();
+};
+
 const DATA = {
   navbar: [
-    { href: "#", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: PencilIcon, label: "Blog" },
+    { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/blog", icon: PencilIcon, label: "Blog" },
   ],
   contact: {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/AbhayDave",
         icon: Icons.github,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/abhay-dave",
         icon: Icons.linkedin,
       },
       X: {
         name: "X",
-        url: "#",
+        url: "https://x.com/Abhay_Dave04",
         icon: Icons.x,
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:abhaydave2004@gmail.com?subject=Website%20Feedback&body=I%20have%20some%20feedback%20about%20your%20website:%0D%0A%0D%0A...",
         icon: Icons.email,
       },
     },
@@ -128,6 +134,7 @@ export function NavigationDock() {
                   <Link
                     href={social.url}
                     aria-label={social.name}
+                    onClick={() => {social.name === "Send Email" && handleEmailClick()}}
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
                       "size-12 rounded-full"

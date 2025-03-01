@@ -12,10 +12,10 @@ export function AnimatedProgressBar() {
       if (prev === 100) {
         return 0;
       }
-      return prev + 10;
+      return prev + 12;
     };
     setProgress(handleIncrement);
-    const interval = setInterval(() => setProgress(handleIncrement), 100);
+    const interval = setInterval(() => setProgress(handleIncrement), 150);
     return () => clearInterval(interval);
   }, []);
 
