@@ -42,13 +42,13 @@ const FirstTimePreloader = () => {
   if (!isFirstVisit) return null;
 
   return (
-    <div className="fixed inset-0 h-full flex items-center justify-center z-50 cursor-none">
+    <div className="fixed inset-0 h-full w-full flex items-center justify-center z-50 cursor-none">
       {isFirstComponentVisible && (
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="absolute w-1/3 h-auto"
+          className="absolute w-11/12 max-w-2/3 mx-auto h-auto"
         >
           <TerminalDemo />
         </motion.div>

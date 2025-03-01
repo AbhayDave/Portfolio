@@ -6,7 +6,7 @@ import {
 
 export function TerminalDemo() {
   return (
-    <Terminal className="max-w-6xl min-h-[35rem]">
+    <Terminal className="min-h-[35rem] mx-auto">
       <TypingAnimation>&gt; booting kernel... </TypingAnimation>
 
       <AnimatedSpan delay={1500} className="text-green-500">
@@ -25,7 +25,7 @@ export function TerminalDemo() {
         <span> </span>
       </AnimatedSpan>
       <TypingAnimation delay={6000}>
-        Welcome.....
+        Welcome....
       </TypingAnimation>
     </Terminal>
   );

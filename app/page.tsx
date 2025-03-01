@@ -18,7 +18,7 @@ export default function Home() {
 
     setTimeout(() => {
       setIsLoading(false);
-    }, 10000); 
+    }, 9000); 
   }, []);
 
   if (isLoading && isFirstVisit) {

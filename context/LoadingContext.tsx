@@ -1,15 +1,14 @@
 "use client";
-
 import { createContext, useContext, useState } from "react";
 
 const LoadingContext = createContext<{
-  isPageLoading: boolean;
-  setIsPageLoading: (value: boolean) => void;
+  // isPageLoading: boolean;
+  // setIsPageLoading: (value: boolean) => void;
   isFirstVisit: boolean;
   markFirstVisitComplete: () => void;
 }>({
-  isPageLoading: false,
-  setIsPageLoading: () => {},
+  // isPageLoading: false,
+  // setIsPageLoading: () => {},
   isFirstVisit: true,
   markFirstVisitComplete: () => {},
 });
@@ -19,19 +18,19 @@ export const LoadingProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [isPageLoading, setIsPageLoading] = useState(false);
+  // const [isPageLoading, setIsPageLoading] = useState(false);
   const [isFirstVisit, setIsFirstVisit] = useState(true);
 
   const markFirstVisitComplete = () => {
-    localStorage.setItem("visited", "true");
+    sessionStorage.setItem("visited", "true");
     setIsFirstVisit(false);
   };
 
   return (
     <LoadingContext.Provider
       value={{
-        isPageLoading,
-        setIsPageLoading,
+        // isPageLoading,
+        // setIsPageLoading,
         isFirstVisit,
         markFirstVisitComplete,
       }}
