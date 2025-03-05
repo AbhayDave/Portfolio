@@ -19,8 +19,7 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const handleEmailClick = () => {
   const emailLink = document.createElement("a");
-  emailLink.href =
-    "mailto:your.email@example.com";
+  emailLink.href = "mailto:abhaydave2004@gmail.com";
   emailLink.click();
 };
 
@@ -52,32 +51,32 @@ export function NavigationDock() {
             </DockIcon>
           ))}
           <Separator orientation="vertical" className="h-full" />
-          {Object.entries(DATA.contact.social).map(
-            ([name, social]) => (
-              <DockIcon key={name}>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Link
-                      href={social.url}
-                      aria-label={social.name}
-                      onClick={() => {
-                        social.name === "Send Email" && handleEmailClick();
-                      }}
-                      className={cn(
-                        buttonVariants({ variant: "ghost", size: "icon" }),
-                        "size-12 rounded-full"
-                      )}
-                    >
-                      <social.icon className="size-7" />
-                    </Link>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>{name}</p>
-                  </TooltipContent>
-                </Tooltip>
-              </DockIcon>
-            )
-          )}
+          {Object.entries(DATA.contact.social).map(([name, social]) => (
+            <DockIcon key={name}>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Link
+                    href={social.url}
+                    aria-label={social.name}
+                    onClick={() => {
+                      if (social.name === "Send Email") {
+                        handleEmailClick();
+                      }
+                    }}
+                    className={cn(
+                      buttonVariants({ variant: "ghost", size: "icon" }),
+                      "size-12 rounded-full"
+                    )}
+                  >
+                    <social.icon className="size-7" />
+                  </Link>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{name}</p>
+                </TooltipContent>
+              </Tooltip>
+            </DockIcon>
+          ))}
           {/* <Separator orientation="vertical" className="h-full py-2" />
           <DockIcon>
             <Tooltip>

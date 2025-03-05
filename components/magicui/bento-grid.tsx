@@ -1,10 +1,7 @@
-import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Globe } from "./globe";
-import { CoolMode } from "./cool-mode";
 import { AnimatedCopyEmailAddressButton } from "../AnimatedCopyEmailAddressButton";
 import { IconCloudGlobe } from "../IconCloud";
 
@@ -133,9 +130,9 @@ const BentoGridItem = ({
               // }}
             >
               {/* <div className={"absolute -bottom-5 right-0 block"}> */}
-              <CoolMode>
-                <AnimatedCopyEmailAddressButton onClick={handleCopy} />
-              </CoolMode>
+              {/* <CoolMode> */}
+              <AnimatedCopyEmailAddressButton onClick={handleCopy} />
+              {/* </CoolMode> */}
               {/* </div> */}
               {/* <Button onClick={handleCopy}>Click Me!</Button> */}
             </div>

@@ -19,7 +19,7 @@ interface Props {
   link?: string;
   image?: string;
   video?: string;
-  links?: readonly {
+  links?: {
     icon: React.ReactNode;
     type: string;
     href: string;

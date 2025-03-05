@@ -18,7 +18,7 @@ const getRadius = (windowWidth: number) => {
 export function OrbitingCirclesDemo() {
   const windowWidth = useWindowSize();
 
-  const { large, small, largeIcon, smallIcon } = getRadius(windowWidth);
+  const { large, largeIcon } = getRadius(windowWidth);
 
   return (
     <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">

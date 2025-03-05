@@ -106,6 +106,7 @@ export const DATA = {
         "Shadcn UI",
         "Magic UI",
       ],
+      links: [],
       // links: [
       //   {
       //     type: "Website",
@@ -134,6 +135,7 @@ export const DATA = {
         "Shadcn UI",
         "Magic UI",
       ],
+      links: [],
       // links: [
       //   {
       //     type: "Website",
@@ -167,6 +169,7 @@ export const DATA = {
         "Stripe",
         "Cloudflare Workers",
       ],
+      links: [],
       // links: [
       //   {
       //     type: "Website",
@@ -200,6 +203,7 @@ export const DATA = {
         "Stripe",
         "Cloudflare Workers",
       ],
+      links: [],
       // links: [
       //   {
       //     type: "Website",

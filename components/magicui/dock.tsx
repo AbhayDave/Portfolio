@@ -9,7 +9,7 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
-import React, { PropsWithChildren, useRef } from "react";
+import React, { PropsWithChildren, ReactElement, useRef } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -47,15 +47,15 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
 
     const renderChildren = () => {
       return React.Children.map(children, (child) => {
-        if (React.isValidElement(child) && child.type === DockIcon) {
-          return React.cloneElement(child, {
-            ...child.props,
-            mouseX: mouseX,
-            size: iconSize,
-            magnification: iconMagnification,
-            distance: iconDistance,
-          });
-        }
+       if (React.isValidElement(child) && child.type === DockIcon) {
+         const element = child as ReactElement<{ [key: string]: any }>;
+         return React.cloneElement(element, {
+           ...element.props,
+           mouseX: mouseX,
+           size: iconSize,
+           magnification: iconMagnification,
+         });
+       }
         return child;
       });
     };

@@ -30,8 +30,8 @@ function Contact() {
               >
                 Linkedin!
               </Link>{" "}
-              I'll get back to you when I can. Just a heads up, I'm not
-              interested in sales pitches.
+              I&apos;ll get back to you when I can. Just a heads up, I&apos;m
+              not interested in sales pitches.
             </p>
           </div>
         </BlurFade>
