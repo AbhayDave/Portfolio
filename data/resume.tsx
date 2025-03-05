@@ -8,7 +8,8 @@ export const DATA = {
   blogUrl: "https://abhaydave.github.io",
   location: "Indore, MP",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
-  description: "Software Engineer in India. I love building things and helping people. Video games, Emulation, Linux.",
+  description:
+    "Software Engineer in India. I love building things and helping people. Video games, Emulation, Linux.",
   summary:
     "Full-stack developer passionate about Linux, open source, DevOps, and system design. Currently deepening my skills in system architecture and automation. While new to contributing, I'm a dedicated user of open-source tools. In my free time, I enjoy Linux customization, cooking, tech exploration, and teaching. Check out my GitHub for projects, and let's connect!",
   avatarUrl: "./me.jpg",
@@ -22,8 +23,10 @@ export const DATA = {
     "Postgres",
     "Docker",
     "Kubernetes",
+    "MongoDB",
     "Java",
-    "C++",
+    "Angular",
+    "AWS",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -87,7 +90,8 @@ export const DATA = {
   projects: [
     {
       title: "Chat Collect",
-      href: "https://chatcollect.com",
+      // href: "https://chatcollect.com",
+      // href: "#",
       dates: "Jan 2024 - Feb 2024",
       active: true,
       description:
@@ -102,13 +106,13 @@ export const DATA = {
         "Shadcn UI",
         "Magic UI",
       ],
-      links: [
-        {
-          type: "Website",
-          href: "https://chatcollect.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
+      // links: [
+      //   {
+      //     type: "Website",
+      //     href: "https://chatcollect.com",
+      //     icon: <Icons.globe className="size-3" />,
+      //   },
+      // ],
       image: "",
       video:
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
@@ -130,18 +134,18 @@ export const DATA = {
         "Shadcn UI",
         "Magic UI",
       ],
-      links: [
-        {
-          type: "Website",
-          href: "https://magicui.design",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
+      // links: [
+      //   {
+      //     type: "Website",
+      //     href: "https://magicui.design",
+      //     icon: <Icons.globe className="size-3" />,
+      //   },
+      //   {
+      //     type: "Source",
+      //     href: "https://github.com/magicuidesign/magicui",
+      //     icon: <Icons.github className="size-3" />,
+      //   },
+      // ],
       image: "",
       video: "https://cdn.magicui.design/bento-grid.mp4",
     },
@@ -163,18 +167,18 @@ export const DATA = {
         "Stripe",
         "Cloudflare Workers",
       ],
-      links: [
-        {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
+      // links: [
+      //   {
+      //     type: "Website",
+      //     href: "https://llm.report",
+      //     icon: <Icons.globe className="size-3" />,
+      //   },
+      //   {
+      //     type: "Source",
+      //     href: "https://github.com/dillionverma/llm.report",
+      //     icon: <Icons.github className="size-3" />,
+      //   },
+      // ],
       image: "",
       video: "https://cdn.llm.report/openai-demo.mp4",
     },
@@ -196,13 +200,13 @@ export const DATA = {
         "Stripe",
         "Cloudflare Workers",
       ],
-      links: [
-        {
-          type: "Website",
-          href: "https://automatic.chat",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
+      // links: [
+      //   {
+      //     type: "Website",
+      //     href: "https://automatic.chat",
+      //     icon: <Icons.globe className="size-3" />,
+      //   },
+      // ],
       image: "",
       video:
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
